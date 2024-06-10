@@ -3,12 +3,14 @@ import '../application.css'
 
 export function Application() {
   const [base64Image, setBase64Image] = useState('');
-  const [prediction, setPrediction] = useState('');
+  const [prediction, setPrediction] = useState(null); // Initialize as null
   const [selectedImage, setSelectedImage] = useState('');
   const [isLoading, setIsLoading] = useState(false);
+  const [isPredicting, setIsPredicting] = useState(false); // New state for prediction loading
 
   const handleImageChange = () => {
     setIsLoading(true);
+    setPrediction(null); // Clear previous prediction when a new image is selected
     const reader = new FileReader();
     reader.onload = function (e) {
       const dataURL = reader.result;
@@ -43,6 +45,7 @@ export function Application() {
   }, []);
 
   const handlePrediction = () => {
+    setIsPredicting(true); // Set predicting state to true
     let message = {
       image: base64Image
     };
@@ -55,14 +58,17 @@ export function Application() {
     })
       .then(response => response.json())
       .then(data => {
-        setPrediction(data.prediction);
-        console.log(data);
+        setTimeout(() => {
+          setPrediction(data.prediction);
+          console.log(data);
+          setIsPredicting(false); // Set predicting state to false after showing loader for at least 3 seconds
+        }, 3000);
       })
       .catch(error => {
         console.error('Error:', error);
+        setIsPredicting(false); // Ensure to set predicting state to false in case of error
       });
   };
-
 
   return (
     <div>
@@ -90,7 +96,10 @@ export function Application() {
             </button>
           </div>
         }
-        {prediction && (
+        <div className='prediction-loader-div'>
+          {isPredicting && <div className="prediction-loader"></div>}
+        </div>
+        {(!isPredicting && prediction) && (
           <div>
             <div id="malignant-prediction">Malignant: {prediction.malignant.toFixed(6)}</div>
             <div id="normal-prediction">Normal: {prediction.benign.toFixed(6)}</div>

@@ -13,7 +13,7 @@ export default function Navbar() {
                 <a href="/" className='home'>Home</a>
                 <a href="https://github.com/christopherkormpos" className="docs" target="_blank" rel="noopener noreferrer">
                     Documentation</a>
-                <a href="/app" className="app"><button class="btn">
+                <a href="/app" className="app"><button className="btn">
   Application
 </button></a>
                 

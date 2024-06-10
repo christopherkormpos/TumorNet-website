@@ -13,7 +13,7 @@ export function Home() {
             Bringing advanced artificial intelligence to tumor diagnosis, this tool offers doctors a reliable
             resource for accurate classification. Integrating advanced Convolutional Neural Networks algorithms,
             our model analyzes breast ultrasound images and makes accurate predictions to enhance the accuracy of
-            tumor classifications, asisting doctors in providing better patient care."
+            tumor classifications, asisting doctors in providing better patient care.
             {/*Our API provides developers and students with access to the latest news and articles from the&nbsp;
             <span>IEEE Spectrum website</span>, allowing you to easily integrate this data
             into your own websites, web applications or mobile apps. With a range of data available,
@@ -43,8 +43,8 @@ export function Home() {
         <p>
         The system employs a convolutional neural network (CNN) to recognize and classify breast ultrasound 
         images. Hosted on a dedicated server, the model processes uploaded images through an intuitive front-end 
-        interface, enabling doctors to receive instant predictions and insights from their own ultrasound scans. 
-        This seamless integration allows for quick and reliable diagnostic support, helping doctors to make 
+        interface, enabling doctors receive instant predictions and insights from their own ultrasound scans. 
+        This seamless integration allows for quick and reliable diagnostic support, helping doctors make 
         timely and informed decisions.
         </p>
       </div>
