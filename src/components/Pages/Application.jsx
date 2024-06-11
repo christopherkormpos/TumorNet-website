@@ -3,14 +3,14 @@ import '../application.css'
 
 export function Application() {
   const [base64Image, setBase64Image] = useState('');
-  const [prediction, setPrediction] = useState(null); // Initialize as null
+  const [prediction, setPrediction] = useState(null); 
   const [selectedImage, setSelectedImage] = useState('');
   const [isLoading, setIsLoading] = useState(false);
-  const [isPredicting, setIsPredicting] = useState(false); // New state for prediction loading
+  const [isPredicting, setIsPredicting] = useState(false); 
 
   const handleImageChange = () => {
     setIsLoading(true);
-    setPrediction(null); // Clear previous prediction when a new image is selected
+    setPrediction(null); 
     const reader = new FileReader();
     reader.onload = function (e) {
       const dataURL = reader.result;
@@ -61,12 +61,12 @@ export function Application() {
         setTimeout(() => {
           setPrediction(data.prediction);
           console.log(data);
-          setIsPredicting(false); // Set predicting state to false after showing loader for at least 3 seconds
+          setIsPredicting(false); 
         }, 3000);
       })
       .catch(error => {
         console.error('Error:', error);
-        setIsPredicting(false); // Ensure to set predicting state to false in case of error
+        setIsPredicting(false); 
       });
   };
 
