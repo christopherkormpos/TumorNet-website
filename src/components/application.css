@@ -26,7 +26,6 @@
 .prediction-loader-div{
   display: flex;
   justify-content: center;
-  margin-top: 40px;
 }
 .prediction-loader {
   width: 50px;
@@ -92,6 +91,7 @@
   transition: all 0.5s;
   cursor: pointer;
   margin: 5px;
+  margin-bottom: 40px;
 }
 
 .predict-button span {
@@ -120,6 +120,43 @@
 .predict-button:hover span:after {
   opacity: 1;
   right: 0;
+}
+.malignant{
+  text-align: center;
+  animation: fade-in 1.5s ease-in-out;
+  margin-bottom: -40px;
+}
+.malignant h2{
+  font-size: 1.5em;
+  color: #f8f8ff;
+}
+.malignant .highlight-mal{
+  background-color: #8b0000;
+  color: #f8f8ff;
+  padding-left: 3px;
+  padding-right: 3px;
+  border-radius: 5px;
+  animation: fadeInRight 2s ease forwards;
+}
+.benign{
+  text-align: center;
+  animation: fade-in 1.5s ease-in-out;
+  margin-bottom: -40px;
+}
+.benign h2{
+  font-size: 1.5em;
+  color: #f8f8ff;
+}
+.benign .highlight-ben{
+  background-color: rgb(5, 172, 69);
+  color: #f8f8ff;
+  padding-left: 3px;
+  padding-right: 3px;
+  border-radius: 5px;
+  animation: fadeInRight 2s ease forwards;
+}
+.conf{
+  text-decoration: underline 1px #fca311;
 }
 .upper{
   display: flex;

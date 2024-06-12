@@ -16,13 +16,9 @@ export function Home() {
             Integrating <span className="highlight5">Complex Convolutional Neural Networks algorithms</span>,
             our model analyzes breast ultrasound images and makes <span className="highlight1">accurate predictions</span> to enhance the accuracy of
             tumor classifications, <span className="highlight6">asisting doctors</span> in providing better patient care.
-            {/*Our API provides developers and students with access to the latest news and articles from the&nbsp;
-            <span>IEEE Spectrum website</span>, allowing you to easily integrate this data
-            into your own websites, web applications or mobile apps. With a range of data available,
-            our API <span className="highlight">is perfect for anyone looking to stay on top of
-              the latest developments in the world of engineering and technology.</span>*/}</p>
+            </p>
         </div>
-        <img src="./images/image1.svg" classname="medical" alt="" />
+        <img src="./images/image1.svg" className="medical" alt="" />
       </div>
 
       <div className="parallax-container">
@@ -36,7 +32,7 @@ export function Home() {
         </div>
         <div className="fade-in-element">
           <h1>100%</h1>
-          <p>Succes Rate on API Calls</p>
+          <p>Success Rate on API Calls</p>
         </div>
       </div>
 
@@ -66,7 +62,7 @@ export function Home() {
             <span className="highlight1"> the optimal choice for binary classification tasks.</span>
           </p>
         </div>
-        <img src="./images/image3.svg" classname="medical" alt="" />
+        <img src="./images/image3.svg" className="medical" alt="" />
       </div>
       <div className='button-container'>
         <span></span>

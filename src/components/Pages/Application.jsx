@@ -3,14 +3,14 @@ import '../application.css'
 
 export function Application() {
   const [base64Image, setBase64Image] = useState('');
-  const [prediction, setPrediction] = useState(null); 
+  const [prediction, setPrediction] = useState(null);
   const [selectedImage, setSelectedImage] = useState('');
   const [isLoading, setIsLoading] = useState(false);
-  const [isPredicting, setIsPredicting] = useState(false); 
+  const [isPredicting, setIsPredicting] = useState(false);
 
   const handleImageChange = () => {
     setIsLoading(true);
-    setPrediction(null); 
+    setPrediction(null);
     const reader = new FileReader();
     reader.onload = function (e) {
       const dataURL = reader.result;
@@ -61,13 +61,36 @@ export function Application() {
         setTimeout(() => {
           setPrediction(data.prediction);
           console.log(data);
-          setIsPredicting(false); 
+          setIsPredicting(false);
         }, 3000);
       })
       .catch(error => {
         console.error('Error:', error);
-        setIsPredicting(false); 
+        setIsPredicting(false);
       });
+  };
+
+  const ValueDisplay = ({ value }) => {
+    const isMalignant = value > 0.5;
+    return (
+      <div>
+        {isMalignant ? (
+          <div className="malignant">
+          <h2 className='malignant'>
+            The model predicts with&nbsp;<span className='conf'>high confidence</span>&nbsp;that the tumor in the provided image is&nbsp;
+            <span className='highlight-mal'>MALIGNANT.</span>
+          </h2>
+        </div>
+        ) : (
+          <div className="benign">
+        <h2 className='benign'>
+          The model predicts with&nbsp;<span className='conf'>high confidence</span>&nbsp;that the tumor in the provided image is&nbsp;
+          <span className='highlight-ben'>BENIGN.</span>
+        </h2>
+      </div>
+        )}
+      </div>
+    );
   };
 
   return (
@@ -100,11 +123,7 @@ export function Application() {
           {isPredicting && <div className="prediction-loader"></div>}
         </div>
         {(!isPredicting && prediction) && (
-          <div>
-            <div id="malignant-prediction">Malignant: {prediction.malignant.toFixed(6)}</div>
-            <div id="normal-prediction">Normal: {prediction.benign.toFixed(6)}</div>
-            <div id="benign-prediction">Benign: {prediction.normal.toFixed(6)}</div>
-          </div>
+          <ValueDisplay value={prediction[0]} />
         )}
       </div>
     </div>
