@@ -1,14 +1,33 @@
+h3{
+  color: #fca311;
+  text-align: center;
+  font-size: 1.3em;
+  margin-top: 50px;
+  animation: fade-in 2s ease-in-out;
+  
+}
+.h3highlight{
+  background-color: #25b09b;
+  color: #f8f8ff;
+  padding-left: 3px;
+  padding-right: 3px;
+  border-radius: 5px;
+  margin-right: 2px;
+}
 .input {
   display: flex;
   justify-content: center;
-  margin-top: 70px;
+  margin-top: 10px;
 }
 
 .image-loader {
   display: flex;
   justify-content: center;
 }
-
+.image-loader img{
+  max-width: 750px;
+  border-radius: 5px;
+}
 .button {
   margin-top: 50px;
   display: flex;
@@ -236,4 +255,36 @@
 .input input[type="file"]:focus::file-selector-button {
   outline: 2px solid #f8f4f9;
   outline-offset: 2px;
+}
+@media (max-width: 700px) {
+  h3{
+    font-size: 0.9em;
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+  .input{
+    width: 300px;
+  }
+  #image-selector{
+    font-size: 0.85em;
+    margin-right: 10px;
+  }
+  .image-loader img{
+    margin-top: -20px;
+    margin-bottom: -10px;
+    max-width: 380px;
+    border-radius: 5px;
+  }
+  .malignant h2{
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 1.3em;
+    margin-bottom: -60px;
+  }
+  .benign h2{
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 1.3em;
+    margin-bottom: -60px;
+  }
 }

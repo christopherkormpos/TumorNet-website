@@ -287,6 +287,7 @@ body {
   .main-content-1 {
     flex-direction: column;
     align-items: center;
+    margin-top: 30px;
   }
 
   .main-content-left {
@@ -297,16 +298,15 @@ body {
   }
 
   .main-content-1 h1 {
-    font-size: 2em;
+    font-size: 1.8em;
     text-align: center;
     margin: 0px;
-    margin-top: 50px;
   }
 
   .main-content-1 p {
-    font-size: 0.9em;
+    font-size: 0.85em;
     margin-bottom: 75px;
-    text-align: center;
+    text-align:justify;
     margin: 0px;
     margin-top: 30px;
     margin-bottom: 50px;
@@ -314,14 +314,13 @@ body {
 
   .parallax-container {
     flex-direction: column;
-    height: 700px;
+    height: 600px;
     margin-top: 50px;
   }
 
   .parallax-container .fade-in-element {
     margin-bottom: 50px;
     margin-top: 50px;
-    margin-right: 25px;
   }
 
   .parallax-container h1 {
@@ -337,85 +336,51 @@ body {
     flex-direction: column-reverse;
     align-items: center;
     justify-content: center;
-    margin-left: 5%;
-    margin-right: 5%;
   }
-
   .main-content-2 p {
-    font-size: 0.9em;
-    text-align: center;
+    font-size: 0.85em;
+    text-align: justify;
     margin-left: 5%;
     margin-right: 5%;
     margin-top: -50px;
     margin-bottom: 50px;
   }
-
-  .carousel-content {
-    font-size: 1em;
-    text-align: center;
-    margin-top: 50px;
-    margin: 0px;
-    margin-top: 25px;
-    margin-left: 5%;
-    margin-right: 5%;
-  }
-
-  .possibilities {
-    font-size: 1.6em;
-    text-align: center;
-    margin: 0px;
-    margin-top: 20px;
-    margin-bottom: 0px;
-    margin-left: 5%;
-    margin-right: 5%;
-  }
-
   .main-content-3 {
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
     margin: 0px;
-    margin-left: 5%;
-    margin-right: 5%;
+    margin-top: 50px;
+    margin-bottom: -20px;
   }
-
-  .main-content-3 h1 {
-    font-size: 1.8em;
-    text-align: center;
-    margin: 0px;
-    margin-left: 5%;
-    margin-right: 5%;
-    margin-bottom: 20px;
-    margin-top: 20px;
-  }
-
   .main-content-3 p {
-    font-size: 0.9em;
-    text-align: center;
+    font-size: 0.85em;
+    text-align: justify;
     margin: 0px;
-    margin-left: 5%;
-    margin-right: 5%;
     margin-bottom: 30px;
   }
-
-  .quest {
-    margin: 0px;
-    margin-bottom: 50px;
+  .underline{
+    margin-left: 25px;
+    margin-right: 25px;
+  }
+  .down-button{
+    margin-bottom: -50px;
   }
 }
 
 @media (max-width: 700px) {
   .main-content-1 img {
-    height: 150px;
+    height: 220px;
     margin-left: 5%;
     margin-right: 5%;
   }
 
   .main-content-2 img {
-    height: 210px;
+    height: 120px;
     margin: 0px;
+    margin-bottom: -50px;
   }
 
   .main-content-3 img {
-    height: 210px;
+    height: 270px;
   }
 }

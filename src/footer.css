@@ -77,14 +77,14 @@
         margin-right: 0px;
     }
     .footer__icon {
-        width: 30px;
-        height: 30px;
+        width: 40px;
+        height: 40px;
         margin: 0 10px;
         object-fit: contain;
     }
     .footer__icon--telsip{
-        width: 45px;
-        height: 30px;
+        width: 50px;
+        height: 40px;
         margin: 0 10px;
         object-fit: contain;
     }

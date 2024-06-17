@@ -95,12 +95,13 @@ export function Application() {
 
   return (
     <div>
+      <h3>Please select an image file (supported types: <span className='h3highlight'>PNG</span>).</h3>
       <div className='upper'>
         <div className='input'>
           <input
             type="file"
             id="image-selector"
-            accept="image/png, image/jpeg"
+            accept="image/png"
             onChange={handleImageChange}
           />
         </div>
