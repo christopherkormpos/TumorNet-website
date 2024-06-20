@@ -88,19 +88,19 @@ body {
   justify-content: space-around;
   flex-direction: column;
   align-items: center;
-  margin-left: 100px;
-  margin-right: 100px;
+  margin-left: 80px;
+  margin-right: 80px;
 }
 
 .parallax-container h1 {
   font: 900;
-  font-size: 4em;
+  font-size: 3.5em;
   color: #FCA311;
   text-shadow: 
         -0.5px -1px 0 #14213D,  
          0.5px -1px 0 #14213D,
         -0.5px  1px 0 #14213D,
-         0.5px  1px 0 #14213D; /* Creates a border effect */
+         0.5px  1px 0 #14213D; 
 }
 
 .parallax-container p {
@@ -111,7 +111,7 @@ body {
         -1px -1px 0 #14213D,  
          1px -1px 0 #14213D,
         -1px  1px 0 #14213D,
-         1px  1px 0 #14213D; /* Creates a border effect */
+         1px  1px 0 #14213D; 
 }
 
 .parallax-container {
@@ -120,7 +120,6 @@ body {
   background-size: cover;
   background-attachment: fixed;
   height: 500px;
-  /* set the height of the container */
   overflow: hidden;
   position: relative;
   align-items: center;
@@ -283,7 +282,7 @@ body {
   }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1100px) {
   .main-content-1 {
     flex-direction: column;
     align-items: center;
@@ -321,6 +320,8 @@ body {
   .parallax-container .fade-in-element {
     margin-bottom: 50px;
     margin-top: 50px;
+    margin-left: 0px;
+    margin-right: 0px;
   }
 
   .parallax-container h1 {
@@ -330,6 +331,7 @@ body {
 
   .parallax-container p {
     font-size: 1.2em;
+    text-align: center;
   }
 
   .main-content-2 {
@@ -363,24 +365,25 @@ body {
     margin-right: 25px;
   }
   .down-button{
-    margin-bottom: -50px;
+    margin-bottom: -50px; 
+    font-size: 1em;
   }
 }
 
 @media (max-width: 700px) {
   .main-content-1 img {
-    height: 220px;
+    height: 200px;
     margin-left: 5%;
     margin-right: 5%;
   }
 
   .main-content-2 img {
-    height: 120px;
+    height: 90px;
     margin: 0px;
     margin-bottom: -50px;
   }
 
   .main-content-3 img {
-    height: 270px;
+    height: 200px;
   }
 }

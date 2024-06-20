@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import '../application.css'
+import '../../application.css'
+import PredictionChart from '../../components/PredictionChart'; // Adjusted import path
+
 
 export function Application() {
   const [base64Image, setBase64Image] = useState('');
@@ -124,7 +126,10 @@ export function Application() {
           {isPredicting && <div className="prediction-loader"></div>}
         </div>
         {(!isPredicting && prediction) && (
+          <>
           <ValueDisplay value={prediction[0]} />
+          <PredictionChart prediction={prediction} />
+          </>
         )}
       </div>
     </div>

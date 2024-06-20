@@ -23,16 +23,16 @@ export function Home() {
 
       <div className="parallax-container">
         <div className="fade-in-element">
-          <h1>80%</h1>
-          <p>Model Accuracy</p>
+          <h1>91.2%</h1>
+          <p>Overall Model Accuracy</p>
         </div>
         <div className="fade-in-element">
-          <h1>2100 ms</h1>
+          <h1>6 sec</h1>
           <p>Maximum response time</p>
         </div>
         <div className="fade-in-element">
-          <h1>100%</h1>
-          <p>Success Rate on API Calls</p>
+          <h1>96%</h1>
+          <p>Sensitivity on Malignant cases</p>
         </div>
       </div>
 
@@ -57,7 +57,7 @@ export function Home() {
             and training of <span className="highlight2">three distinct convolutional neural networks</span> using the available ultrasound
             dataset. The primary objective was to identify the most effective algorithm based on strict performance metrics.
             Among the models tested, the <span className="highlight3">NASNet</span> architecture emerged as the superior
-            performer, attaining an impressive accuracy of <span className="highlight4">90%</span>. This model not only demonstrated the highest
+            performer, attaining an impressive accuracy of <span className="highlight4">91.2%</span>. This model not only demonstrated the highest
             accuracy but also excelled across various other performance metrics, solidifying its status as 
             <span className="highlight1"> the optimal choice for binary classification tasks.</span>
           </p>
