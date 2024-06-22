@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import '../../application.css'
-import PredictionChart from '../../components/PredictionChart'; // Adjusted import path
-
+import PredictionChart from '../../components/PredictionChart'; 
 
 export function Application() {
   const [base64Image, setBase64Image] = useState('');

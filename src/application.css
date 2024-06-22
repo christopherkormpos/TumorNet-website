@@ -68,53 +68,6 @@ h3{
   margin: 8px;
   animation-duration: 3s;
 }
-@keyframes l15{ 
-  100%{transform: rotate(1turn)}
-}
-@keyframes l1 {
-
-  0%,
-  100% {
-    transform: translate(-40px, -40px);
-    box-shadow: 0 0 #1e7a8f, 0 0 #fca311
-  }
-
-  40% {
-    transform: translate(40px, 40px);
-    box-shadow: -10px -10px #1e7a8f, -20px -20px #fca311
-  }
-
-  50% {
-    transform: translate(40px, 40px);
-    box-shadow: 0 0 #1e7a8f, 0 0 #fca311
-  }
-
-  90% {
-    transform: translate(-40px, -40px);
-    box-shadow: 10px 10px #1e7a8f, 20px 20px #fca311
-  }
-}
-@keyframes fadeInLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-100%);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes fadeInRight {
-  from {
-    opacity: 0;
-    transform: translateX(100%);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
 .predict-button {
   display: inline-block;
   border-radius: 4px;
@@ -274,6 +227,32 @@ h3{
 .input input[type="file"]:focus::file-selector-button {
   outline: 2px solid #f8f4f9;
   outline-offset: 2px;
+}
+@keyframes l15{ 
+  100%{transform: rotate(1turn)}
+}
+@keyframes l1 {
+
+  0%,
+  100% {
+    transform: translate(-40px, -40px);
+    box-shadow: 0 0 #1e7a8f, 0 0 #fca311
+  }
+
+  40% {
+    transform: translate(40px, 40px);
+    box-shadow: -10px -10px #1e7a8f, -20px -20px #fca311
+  }
+
+  50% {
+    transform: translate(40px, 40px);
+    box-shadow: 0 0 #1e7a8f, 0 0 #fca311
+  }
+
+  90% {
+    transform: translate(-40px, -40px);
+    box-shadow: 10px 10px #1e7a8f, 20px 20px #fca311
+  }
 }
 @media (max-width: 700px) {
   h3{
